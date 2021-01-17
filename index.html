@@ -1,19 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"> 
-<head>
-<title>Page Title</title>
-</head>
-<body> 
+<html> 
 
 <h1>Random Meme Generator</h1>
 <p>type in text to be put into a random meme</p>
 
-<form action="/generated_meme.php" method = "get">
-  <label for="top_text">Top Text:</label><br>
-  <input type="text" text="top_text"><br>
-  <label for="bot_text">Bottom Text:</label><br>
-  <input type="text" text="bot_text" ><br><br>
-  <button type="generate" formaction="/generated_meme.php">Get meme</button>
+<form action="{{url_for('meme_result')}}", method = POST>
+  Top Text:<input type="text" name="top text"><br>
+  Bottom Text:<input type="text" name="bottom text"><br>
+  <input type="submit" value = "Get meme"/>
 </form> 
    
 </body> 
